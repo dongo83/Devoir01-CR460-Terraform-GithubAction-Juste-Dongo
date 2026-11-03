@@ -36,3 +36,5 @@ jobs:
       # Planification des modifications
       - name: Terraform Plan
         run: terraform plan -input=false
+        
+      # FIN
