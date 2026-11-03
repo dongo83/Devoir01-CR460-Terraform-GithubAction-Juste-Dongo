@@ -10,3 +10,15 @@ terraform {
     }
   }
 }
+# Configuration du fournisseur Azure
+provider "azurerm" {
+  features {}
+}
+
+# Récupération des informations de l'abonnement Azure
+data "azurerm_subscription" "current" {}
+
+# Affichage du nom de l'abonnement Azure
+output "subscription_name" {
+  value = data.azurerm_subscription.current.display_name
+}
